@@ -94,8 +94,6 @@ public class StudentControllerIT {
 
 		List<StudentDto> students = getAllStudents(criteria);
 
-		//assertThat(student1).usingRecursiveComparison().isIn(students);
-		//assertThat(student2).usingRecursiveComparison().isNotIn(students);
 		assertThat(students)
 		    .usingRecursiveFieldByFieldElementComparator()
 		    .contains(student1); 
